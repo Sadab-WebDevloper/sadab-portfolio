@@ -34,6 +34,14 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     liveUrl: "https://food-website-pi-ten.vercel.app/",
     githubUrl: "#"
+  },
+  {
+    title: "Charity Website",
+    description: "",
+    image: "charity.png",
+    tech: ["Nuxt.js","Vue.js","TypeScript","Tailwind CSS","Framer Motion"],
+    liveUrl: "https://charity-website-murex.vercel.app/",
+    githubUrl: "#"
   }
 ];
 
