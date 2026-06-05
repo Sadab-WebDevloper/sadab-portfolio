@@ -38,13 +38,14 @@ export default function HeroSection() {
             >
               View Projects <ArrowRight size={18} />
             </Link>
-            <Link 
-              href="/resume.pdf"
+            <a 
+              href="/Sadab_Mamu_Resume.pdf"
               target="_blank"
+              download
               className="px-8 py-4 rounded-full bg-surface border border-border text-foreground font-semibold hover:bg-surface-hover hover:scale-105 transition-all flex items-center gap-2"
             >
               <Download size={18} /> Resume
-            </Link>
+            </a>
           </div>
         </motion.div>
 

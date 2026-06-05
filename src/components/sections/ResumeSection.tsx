@@ -67,8 +67,9 @@ export default function ResumeSection() {
             
             <div className="mt-6">
               <a 
-                href="/resume.pdf" 
+                href="/Sadab_Mamu_Resume.pdf" 
                 target="_blank"
+                download
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all hover:-translate-y-1"
               >
                 <Download size={20} /> Download Full Resume

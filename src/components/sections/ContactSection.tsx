@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactSection() {
@@ -157,6 +157,7 @@ export default function ContactSection() {
                   id="message" 
                   name="message"
                   required 
+                  maxLength={2000}
                   rows={5}
                   className="px-4 py-3 rounded-xl bg-surface border border-border focus:border-primary focus:outline-none transition-colors resize-none"
                   placeholder="Tell me about your project..."
@@ -174,7 +175,15 @@ export default function ContactSection() {
                 disabled={isSubmitting}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-foreground text-background font-bold hover:bg-primary transition-colors mt-2 disabled:opacity-70"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'} <Send size={18} />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={18} className="animate-spin" /> Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message <Send size={18} />
+                  </>
+                )}
               </button>
             </form>
           </motion.div>
