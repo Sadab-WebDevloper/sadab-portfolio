@@ -58,6 +58,14 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     liveUrl: "https://bubble-attack.netlify.app/",
     githubUrl: ""
+  },
+   {
+    title: "Neon Wave",
+    description: "A premium music streaming web application featuring a stunning dark-themed interface. It includes seamless audio playback controls, custom playlist creation, a 'liked songs' collection, and a fully responsive mobile design powered by Redux for smooth state management.",
+    image: "NeonWave.png",
+    tech: ["React", "Tailwind CSS", "Redux Toolkit", "Vite"],
+    liveUrl: "https://neon-wave-six.vercel.app/",
+    githubUrl: ""
   }
 ];
 
@@ -115,7 +123,12 @@ export default function ProjectsSection() {
                 </div>
 
                 <div className="flex items-center gap-4 mt-auto">
-                  <Link href={project.liveUrl} className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  <Link 
+                    href={project.liveUrl} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  >
                     <ExternalLink size={16} /> Live Demo
                   </Link>
                 </div>

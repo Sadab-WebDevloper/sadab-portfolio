@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t border-border bg-background py-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-foreground/60 text-sm">
-          <p>&copy; {new Date().getFullYear()} Sadab Mamu. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
           
           <div className="flex items-center gap-6">
             <a href="https://github.com/Sadab-WebDevloper" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="GitHub">
@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           <p className="flex items-center gap-1">
-            Built with Next.js &amp; Tailwind CSS
+            Creatd by Mohmad Sadab Mamu
           </p>
         </div>
       </div>

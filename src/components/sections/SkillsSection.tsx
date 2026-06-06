@@ -2,10 +2,10 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux"] },
-  { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "GraphQL", "REST APIs"] },
-  { category: "Database", items: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Supabase", "Prisma"] },
-  { category: "DevOps & Tools", items: ["Git", "Docker", "AWS", "Vercel", "Linux", "CI/CD"] },
+  { category: "Frontend", items: ["Html","Css", "JavaScript","React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "Nuxt.js", "Vue.js"] },
+  { category: "Backend", items: ["Node.js", "Express.js","Strapi", "JWT", "Bcrypt", "cookie-parser"] },
+  { category: "Database", items: ["MongoDB", "PostgreSQL", "MySQL", "Supabase"] },
+  { category: "DevOps & Tools", items: ["Git","CI/CD", "Github Dekstop"] },
 ];
 
 export default function SkillsSection() {
@@ -28,7 +28,7 @@ export default function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((skillGroup, idx) => (
             <motion.div
               key={idx}

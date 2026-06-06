@@ -73,49 +73,63 @@ export default function HeroSection() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
-                <div className="mx-auto text-xs font-mono text-foreground/50">developer.ts</div>
+                <div className="mx-auto text-xs font-mono text-foreground/50">developer.js</div>
               </div>
               
               {/* Code Content */}
-              <div className="p-6 font-mono text-sm md:text-base overflow-x-auto">
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">1</span>
+              <div className="p-4 md:p-6 font-mono text-xs md:text-sm overflow-hidden">
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">1</span>
                   <span className="text-purple-400">const</span> <span className="text-blue-400 ml-2">developer</span> <span className="text-foreground/80 ml-2">=</span> <span className="text-yellow-300 ml-2">{`{`}</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">2</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">2</span>
                   <span className="text-foreground/80 ml-4">name:</span> <span className="text-green-400 ml-2">'Sadab Mamu'</span><span className="text-foreground/80">,</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">3</span>
-                  <span className="text-foreground/80 ml-4">role:</span> <span className="text-green-400 ml-2">'Full Stack Developer'</span><span className="text-foreground/80">,</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">3</span>
+                  <span className="text-foreground/80 ml-4">role:</span> <span className="text-green-400 ml-2">'MERN Stack Developer'</span><span className="text-foreground/80">,</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">4</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">4</span>
                   <span className="text-foreground/80 ml-4">skills:</span> <span className="text-yellow-300 ml-2">[</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">5</span>
-                  <span className="text-green-400 ml-8">'React'</span><span className="text-foreground/80">,</span> <span className="text-green-400 ml-2">'Next.js'</span><span className="text-foreground/80">,</span> <span className="text-green-400 ml-2">'TypeScript'</span><span className="text-foreground/80">,</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">5</span>
+                  <div className="flex flex-wrap text-green-400 ml-8">
+                    <span>'React'</span><span className="text-foreground/80 mr-2">,</span>
+                    <span>'Next.js'</span><span className="text-foreground/80 mr-2">,</span>
+                    <span>'JavaScript'</span><span className="text-foreground/80 mr-2">,</span>
+                  </div>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">6</span>
-                  <span className="text-green-400 ml-8">'Node.js'</span><span className="text-foreground/80">,</span> <span className="text-green-400 ml-2">'Tailwind CSS'</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">6</span>
+                  <div className="flex flex-wrap text-green-400 ml-8">
+                    <span>'Express'</span><span className="text-foreground/80 mr-2">,</span>
+                    <span>'Node.js'</span><span className="text-foreground/80 mr-2">,</span>
+                    <span>'MongoDB'</span><span className="text-foreground/80 mr-2">,</span>
+                  </div>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">7</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">7</span>
+                  <div className="flex flex-wrap text-green-400 ml-8">
+                    <span>'Tailwind CSS'</span>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">8</span>
                   <span className="text-yellow-300 ml-4">]</span><span className="text-foreground/80">,</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">8</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">9</span>
                   <span className="text-foreground/80 ml-4">hardWorker:</span> <span className="text-orange-400 ml-2">true</span><span className="text-foreground/80">,</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">9</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">10</span>
                   <span className="text-foreground/80 ml-4">problemSolver:</span> <span className="text-orange-400 ml-2">true</span>
                 </div>
-                <div className="flex">
-                  <span className="text-foreground/30 select-none pr-4 text-right w-8">10</span>
+                <div className="flex items-start">
+                  <span className="text-foreground/30 select-none pr-4 text-right w-8 flex-shrink-0">11</span>
                   <span className="text-yellow-300">{`}`}</span><span className="text-foreground/80">;</span>
                 </div>
               </div>
