@@ -37,11 +37,27 @@ const projects = [
   },
   {
     title: "Charity Website",
-    description: "",
+    description: "A premium charity web application featuring interactive donation causes, an engaging upcoming events tracker, dynamic scroll animations, and a comprehensive media gallery.",
     image: "charity.png",
     tech: ["Nuxt.js","Vue.js","TypeScript","Tailwind CSS","Framer Motion"],
     liveUrl: "https://charity-website-murex.vercel.app/",
     githubUrl: "#"
+  },
+  {
+    title: "Fresh Mart",
+    description: "A modern online grocery platform for fresh produce, featuring interactive shopping carts, smooth animations, and responsive design built on Next.js.",
+    image: "freshmart.png",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Lucide React"],
+    liveUrl: "https://fresh-mart-iota-one.vercel.app/",
+    githubUrl: ""
+  }, 
+    {
+    title: "Bubble Game",
+    description: "An interactive, browser-based typing and reflex game where players pop dynamically generated bubbles before they escape, featuring a sleek modern design.",
+    image: "bubblegame.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://bubble-attack.netlify.app/",
+    githubUrl: ""
   }
 ];
 
@@ -86,7 +102,7 @@ export default function ProjectsSection() {
               
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
-                <p className="text-foreground/60 text-sm mb-4 flex-1">
+                <p className="text-foreground/60 text-sm mb-4">
                   {project.description}
                 </p>
                 
