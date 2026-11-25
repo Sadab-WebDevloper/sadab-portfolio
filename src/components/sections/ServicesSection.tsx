@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Code2, Smartphone, Layout, Database, Terminal, Server } from 'lucide-react';
 
 const services = [
@@ -39,27 +39,27 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col gap-4 mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
             My <span className="text-primary">Services</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
-            <motion.div
+            <m.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: Math.min(idx * 0.06, 0.24) }}
               className="group p-8 rounded-3xl bg-surface border border-border hover:border-primary/50 hover:bg-surface-hover transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-2xl bg-background border border-border flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-background transition-all duration-300">
@@ -69,7 +69,7 @@ export default function ServicesSection() {
               <p className="text-foreground/70 leading-relaxed text-sm">
                 {service.description}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

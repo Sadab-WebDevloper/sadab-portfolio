@@ -1,30 +1,30 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Download, FileText, CheckCircle2 } from 'lucide-react';
 
 export default function ResumeSection() {
   return (
     <section id="resume" className="py-24 relative">
       <div className="max-w-5xl mx-auto px-6">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center gap-4 mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
             Resume & <span className="text-primary">Education</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+          <m.div 
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
             className="p-8 rounded-3xl bg-surface border border-border shadow-lg"
           >
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
@@ -46,13 +46,13 @@ export default function ResumeSection() {
                 <p className="text-foreground/70 text-sm">Foundational knowledge in computer engineering, programming, and system design.</p>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+          <m.div 
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col gap-6"
           >
             <h3 className="text-2xl font-bold mb-2">Why Hire Me?</h3>
@@ -67,15 +67,14 @@ export default function ResumeSection() {
             
             <div className="mt-6">
               <a 
-                href="/Sadab_Mamu_Resume.pdf" 
-                target="_blank"
-                download
+                href="/Sadab_Mamu_CV.pdf" 
+                download="Sadab_Mamu_CV.pdf"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all hover:-translate-y-1"
               >
                 <Download size={20} /> Download Full Resume
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

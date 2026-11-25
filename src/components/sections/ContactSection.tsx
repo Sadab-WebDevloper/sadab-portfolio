@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -35,7 +35,7 @@ export default function ContactSection() {
       } else {
         setStatus({ type: 'error', message: result.error || 'Failed to send message.' });
       }
-    } catch (error) {
+    } catch {
       setStatus({ type: 'error', message: 'An unexpected error occurred.' });
     } finally {
       setIsSubmitting(false);
@@ -45,11 +45,11 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 relative bg-surface/30">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center gap-4 mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
@@ -57,17 +57,17 @@ export default function ContactSection() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
           <p className="text-foreground/60 max-w-2xl mt-4">
-            Have a project in mind or just want to say hi? I'm currently open for new opportunities. Let's build something amazing together.
+            Have a project in mind or just want to say hi? I&apos;m currently open for new opportunities. Let&apos;s build something amazing together.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Contact Info */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+          <m.div 
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-2 flex flex-col gap-8"
           >
             <div className="p-8 rounded-3xl bg-background border border-border shadow-lg flex flex-col gap-6 h-full">
@@ -103,14 +103,14 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+          <m.div 
+            initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-3"
           >
             <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-background border border-border shadow-lg flex flex-col gap-6">
@@ -123,7 +123,7 @@ export default function ContactSection() {
                     name="name"
                     required 
                     className="px-4 py-3 rounded-xl bg-surface border border-border focus:border-primary focus:outline-none transition-colors"
-                    placeholder="John Doe"
+                    placeholder="Enter Your Name"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -134,7 +134,7 @@ export default function ContactSection() {
                     name="email"
                     required 
                     className="px-4 py-3 rounded-xl bg-surface border border-border focus:border-primary focus:outline-none transition-colors"
-                    placeholder="john@example.com"
+                    placeholder="sadab@example.com"
                   />
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default function ContactSection() {
                 )}
               </button>
             </form>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

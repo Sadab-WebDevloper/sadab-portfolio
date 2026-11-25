@@ -1,22 +1,54 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const skills = [
-  { category: "Frontend", items: ["Html","Css", "JavaScript","React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "Nuxt.js", "Vue.js"] },
-  { category: "Backend", items: ["Node.js", "Express.js","Strapi", "JWT", "Bcrypt", "cookie-parser"] },
-  { category: "Database", items: ["MongoDB", "PostgreSQL", "MySQL", "Supabase"] },
-  { category: "DevOps & Tools", items: ["Git","CI/CD", "Github Dekstop"] },
+  {
+    category: "Frontend",
+    items: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Vue.js",
+      "Nuxt.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Framer Motion",
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "Next.js API Routes",
+      "Strapi CMS",
+      "JWT Auth",
+      "Bcrypt",
+    ],
+  },
+  {
+    category: "Database",
+    items: ["MongoDB", "PostgreSQL", "MySQL", "Supabase"],
+  },
+  {
+    category: "DevOps & Tools",
+    items: ["Git", "GitHub", "CI/CD", "Vercel", "Netlify", "Vite", "Cloudinary"],
+  },
 ];
 
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 relative bg-surface/30">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center gap-4 mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
@@ -26,16 +58,16 @@ export default function SkillsSection() {
           <p className="text-foreground/60 max-w-2xl mt-4">
             A comprehensive list of technologies and tools I use to build modern, scalable, and high-performance applications.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((skillGroup, idx) => (
-            <motion.div
+            <m.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: idx * 0.06 }}
               className="p-6 rounded-3xl bg-background border border-border hover:border-primary/50 transition-colors shadow-lg"
             >
               <h3 className="text-xl font-semibold mb-6 text-foreground">{skillGroup.category}</h3>
@@ -49,7 +81,7 @@ export default function SkillsSection() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -2,17 +2,20 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from '@/components/Navbar';
-import GeminiChat from '@/components/GeminiChat';
 import Footer from '@/components/Footer';
+import MotionProvider from '@/components/MotionProvider';
+import GeminiChatLauncher from '@/components/GeminiChatLauncher';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,12 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="antialiased selection:bg-primary/30 selection:text-primary-dark overflow-x-hidden">
-        <Navbar />
-        {children}
-        <Footer />
-        <GeminiChat />
+        <MotionProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <GeminiChatLauncher />
+        </MotionProvider>
       </body>
     </html>
   );
 }
-

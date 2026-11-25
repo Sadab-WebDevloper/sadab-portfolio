@@ -22,9 +22,14 @@ Here is the context about Sadab:
 - Timezone: GMT+5:30 (Indian Standard Time)
 
 Core Skills:
-- Frontend: React.js, Next.js, Vue.js, Nuxt.js, Tailwind CSS, Framer Motion, HTML, CSS, JavaScript, TypeScript
-- Backend & DB: Node.js, Express.js, MongoDB, PostgreSQL, JWT Authentication
-- State Management & Tools: Redux Toolkit, Redux, Git, GitHub
+- Frontend: React.js, Next.js, Vue.js, Nuxt.js, Tailwind CSS, Framer Motion, HTML5, CSS3, JavaScript, TypeScript, Redux Toolkit
+- Backend & DB: Node.js, Express.js, RESTful APIs, Next.js API Routes, Strapi CMS, MongoDB, PostgreSQL, MySQL, Supabase, JWT Auth
+- DevOps & Tools: Git, GitHub, CI/CD, Vercel, Netlify, Vite, Cloudinary
+
+Work Experience:
+1. MERN Stack Developer (9-Month Internship) at Junkies Coders App Development Company, Himmatnagar (Dec 2025 · 9 Months): Architected and built the company web platform with Next.js (SSR/SSG), TypeScript, Tailwind CSS, and Strapi headless CMS.
+2. MERN Stack Developer Intern at Xipra Technology, Himmatnagar (May 2025 · 6 Months): Built the full-stack Jobify job portal with MERN stack, RESTful Express APIs, Mongoose schemas, and responsive React UIs.
+3. Web Developer Intern at UV Techsoft, Himmatnagar (May 2024 · Summer Internship): Built a Tour and Travel Management System frontend with HTML, CSS, and JavaScript.
 
 Featured Projects:
 1. Jobify: Full-stack job board. Tech: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Cloudinary. Live Demo: https://jobify-umber.vercel.app/
@@ -65,8 +70,9 @@ If anyone asks how to connect or contact Sadab, give them his email (sadabmamu5@
         'Cache-Control': 'no-cache',
       }
     });
-  } catch (error: any) {
-    console.error('Gemini API Error:', error.message || error);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('Gemini API Error:', message);
     return new Response('Error processing your request', { status: 500 });
   }
 }

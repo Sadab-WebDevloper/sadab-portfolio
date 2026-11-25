@@ -1,11 +1,13 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
-import SkillsSection from '@/components/sections/SkillsSection';
-import ExperienceSection from '@/components/sections/ExperienceSection';
-import ProjectsSection from '@/components/sections/ProjectsSection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import ResumeSection from '@/components/sections/ResumeSection';
-import ContactSection from '@/components/sections/ContactSection';
+
+const SkillsSection = dynamic(() => import('@/components/sections/SkillsSection'));
+const ExperienceSection = dynamic(() => import('@/components/sections/ExperienceSection'));
+const ProjectsSection = dynamic(() => import('@/components/sections/ProjectsSection'));
+const ServicesSection = dynamic(() => import('@/components/sections/ServicesSection'));
+const ResumeSection = dynamic(() => import('@/components/sections/ResumeSection'));
+const ContactSection = dynamic(() => import('@/components/sections/ContactSection'));
 
 export default function Home() {
   return (
@@ -21,4 +23,3 @@ export default function Home() {
     </main>
   );
 }
-
